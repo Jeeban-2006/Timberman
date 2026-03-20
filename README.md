@@ -1,159 +1,194 @@
-🌲 Timberman Game (C++ | SFML)
+# 🌲 Timberman Game (C++ | SFML)
 
-A fast-paced 2D arcade-style game inspired by the classic Timberman, built using C++ and SFML. Chop wood, avoid branches, and survive as long as possible!
+![C++](https://img.shields.io/badge/C++-17-blue?style=for-the-badge\&logo=c%2B%2B)
+![SFML](https://img.shields.io/badge/SFML-2.5-green?style=for-the-badge)
+![Game](https://img.shields.io/badge/Type-2D%20Arcade-orange?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-🎮 Demo Preview
+> A fast-paced 2D arcade game inspired by **Timberman**, built using **C++ and SFML**. Test your reflexes by chopping wood while avoiding deadly branches!
 
-(Add screenshots or gameplay GIFs here)
 
-📸 Example:
-![Gameplay](screenshots/gameplay.png)
-🚀 Features
 
-⚡ Smooth real-time gameplay using SFML
+## 🚀 Features
 
-🎯 Increasing difficulty as score grows
+* ⚡ Smooth real-time gameplay
+* 🎯 Progressive difficulty system
+* ⏱️ Dynamic time bar mechanics
+* 🎵 Sound effects for immersive experience
+* 🎨 Simple and clean 2D visuals
+* 🧠 Reflex-based challenge gameplay
 
-⏱️ Dynamic time bar system
+---
 
-🎵 Sound effects and game feedback
+## 🕹️ Controls
 
-🎨 Simple yet engaging 2D graphics
+| Key            | Action            |
+| -------------- | ----------------- |
+| ⬅️ Left Arrow  | Move Left & Chop  |
+| ➡️ Right Arrow | Move Right & Chop |
+| ❌ Close Window | Exit Game         |
 
-🧠 Reflex-based mechanics (easy to learn, hard to master)
+---
 
-🕹️ Game Controls
-Key	Action
-⬅️ Left Arrow	Move left & cut
-➡️ Right Arrow	Move right & cut
-❌ Close Window	Exit game
-🧠 Game Logic
+## 🧠 Game Mechanics
 
-Player chops a tree from left or right side
+* Player chops a tree from either side
+* Random branches spawn as obstacles
+* Collision with branch = **Game Over** 💀
+* Score increases with each successful chop
+* Time bar decreases continuously
+* Faster gameplay as score increases
 
-Random branches appear as obstacles
+---
 
-If player hits a branch → 💀 Game Over
+## 🏗️ Tech Stack
 
-Score increases with each successful cut
+* **Language:** C++
+* **Library:** SFML (Simple and Fast Multimedia Library)
+* **Core Concepts:**
 
-Time bar decreases continuously but:
+  * Game Loop
+  * Event Handling
+  * Collision Detection
+  * Sprite Rendering
+  * Real-time Input Processing
 
-⬆️ Increases slightly with higher score
+---
 
-🏗️ Tech Stack
+## 📂 Project Structure
 
-Language: C++
-
-Library: SFML (Simple and Fast Multimedia Library)
-
-Concepts Used:
-
-Game Loop
-
-Event Handling
-
-Collision Detection
-
-Sprite Rendering
-
-Real-time Input Processing
-
-📦 Project Structure
+```bash
 Timberman/
 │
-├── Timber.cpp        # Main game logic
-├── graphics/         # Game textures & sprites
-├── sound/            # Audio files
-├── fonts/            # UI fonts
-├── Debug/Release     # Build outputs
+├── Timberman.cpp              # Main game logic
+│
+├── assets/
+│   ├── graphics/           # Images & textures
+│   │   ├── background.png
+│   │   ├── tree.png
+│   │   ├── player.png
+│   │   └── branch.png
+│   │
+│   ├── sound/              # Sound effects
+│   │   ├── chop.wav
+│   │   ├── death.wav
+│   │   └── out_of_time.wav
+│   │
+│   └── fonts/
+│       └── font.ttf
+│
+├── build/                  # Compiled files (optional)
+│
+├── screenshots/            # Screenshots / GIFs
+│   └── gameplay.png
+│
 └── README.md
-⚙️ Installation & Setup
-🔧 Prerequisites
+```
 
-C++ Compiler (GCC / MSVC)
+---
 
-SFML Library (>= 2.4)
+## ⚙️ Installation & Setup
 
-Download SFML 👉 https://www.sfml-dev.org/
+### 🔧 Prerequisites
 
-🛠️ Build Steps (Windows - Visual Studio)
+* C++ Compiler (GCC / MSVC)
+* SFML Library (>= 2.5)
 
-Clone the repository:
+🔗 Download SFML: https://www.sfml-dev.org/download.php
 
+---
+
+### 🛠️ Run on Windows (Visual Studio)
+
+1. Clone repository:
+
+```bash
 git clone https://github.com/Jeeban-2006/Timberman.git
 cd Timberman
+```
 
-Open .sln or project file in Visual Studio
+2. Open project in Visual Studio
 
-Configure SFML:
+3. Configure SFML:
 
-Add SFML include directory
+   * Add **Include Directory**
+   * Add **Library Directory**
+   * Link these libraries:
 
-Add SFML lib directory
-
-Link libraries:
-
+```txt
 sfml-graphics.lib
 sfml-window.lib
 sfml-system.lib
 sfml-audio.lib
+```
 
-Build and Run 🚀
+4. Build & Run 🚀
 
-🐧 Build (Linux)
+---
+
+### 🐧 Run on Linux
+
+```bash
 g++ Timber.cpp -o timber -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 ./timber
-📈 Future Improvements
+```
 
-🧍 Character animations
+---
 
-🌄 Multiple environments/themes
+## 📈 Future Improvements
 
-🏆 High-score saving system
+* 🎮 Main Menu UI
+* 🏆 High Score Saving System
+* 🌄 Multiple Themes & Environments
+* 🧍 Character Animations
+* 🔥 Power-ups (shield, slow time, etc.)
+* 📱 Cross-platform build
 
-🎮 Game menu UI
+---
 
-📱 Cross-platform support
-
-🔥 Power-ups & advanced mechanics
-
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome!
 
-Fork the repo
+```bash
+1. Fork the repository
+2. Create a new branch (feature-name)
+3. Commit your changes
+4. Push and open a Pull Request
+```
 
-Create a new branch
+---
 
-Make your changes
+## 📜 License
 
-Submit a Pull Request
+This project is created for **educational and learning purposes**.
 
-📜 License
+---
 
-This project is for learning and educational purposes.
+## 👨‍💻 Author
 
-👨‍💻 Author
+**Jeeban Krushna Sahu**
 
-Jeeban Krushna Sahu
+* 🎓 B.Tech Student
+* 💡 Interested in Game Development & AI
+* 🚀 Building impactful projects
 
-🎓 B.Tech Student
+---
 
-💡 Passionate about Game Dev & AI
-
-🚀 Building impactful projects
-
-⭐ Show Your Support
+## ⭐ Support
 
 If you like this project:
 
-🌟 Star the repository
+* ⭐ Star this repo
+* 🍴 Fork it
+* 📢 Share it
 
-🍴 Fork it
+---
 
-📢 Share it
+## 💡 Inspiration
 
-💡 Inspiration
+Inspired by the classic Timberman arcade game — simple yet addictive gameplay focused on speed and reflex.
 
-Inspired by the classic Timberman arcade concept — simple mechanics, addictive gameplay, and fast reflex challenges.
+---
+
+
